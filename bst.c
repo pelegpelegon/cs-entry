@@ -4,7 +4,7 @@ ID: 333135440
 Assignment: ex6
 */
 
-
+#include <stdio.h>
 #include <stdlib.h>
 #include "bst.h"
 
@@ -15,8 +15,8 @@ Assignment: ex6
 BST* createBST(int (*cmp)(void*, void*), void (*print)(void*), void (*freeData)(void*)){
     BST *binarySearchTree;
     BSTNode *treeRoot;
-    binarySearchTree = malloc(sizeof(BST));
-    treeRoot = malloc(sizeof(BSTNode));
+    binarySearchTree = calloc(1, sizeof(BST));
+    treeRoot = calloc(1, sizeof(BSTNode));
 
     /* memory error exeption */
     if((binarySearchTree == NULL) || (treeRoot == NULL)){

@@ -21,7 +21,6 @@ int getInt(const char* prompt){
         printf("\nInvalid input: ");
         success = scanf(" %d", &input);
     }
-    printf("\n");
     return input;
 }
 
@@ -30,7 +29,7 @@ char* getString(const char* prompt){
     char currChr, *pString = NULL;
     int index = 1;
 
-    printf("%S", prompt);
+    printf("%s", prompt);
 
     /* handles user not entering anything */
     do{
@@ -50,7 +49,5 @@ char* getString(const char* prompt){
 
         currChr = getchar();
     }
-
-    printf("\n");
     return pString;   
 }
